@@ -12,21 +12,7 @@ function Load_Sentences(ArrayObj) {
                        sSp:  'Busquedar de Workplace'      }    );
 */                       
 
-      ArrayObj.push({  sId:'Nbre_Resultats', sName:'Nbre_Resultats', sAttributeName: 'innerHTML', 
-                       sFr:  'compte(s) trouv&eacute;(s)',
-                       sUs:  'account(s) found',
-                       sPt:  'conta(s) encontrado',
-                       sNl:  'account(s) gevonden',
-                       sRu:  'aккаунт(ы) найден(ы)',
-                       sSp:  'cantided de personas encontradas'      }    );
-
-      ArrayObj.push({  sId:'Details', sName:'Details', sAttributeName: 'innerHTML', 
-                       sFr:  'D&eacute;tails',
-                       sUs:  'Details',
-                       sPt:  'Detalhes',
-                       sNl:  'Details',
-                       sRu:  'подробности',
-                       sSp:  'Details'      }    );
+viré pour le projet A
 
       ArrayObj.push({  sId:'Name_Field', sName:'Name_Field', sAttributeName: 'placeholder', 
                        sFr:  'Insérer Nom à rechercher...',

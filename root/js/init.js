@@ -9,6 +9,8 @@
       return(node_aff);
    }
 
+encore le projet A
+
 </script>
 </body>
 </html> 
