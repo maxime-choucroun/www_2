@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Workplace Account Search</title>
+
+<!--[if IE]><link rel="shortcut icon" href="Pictures/favicon.ico"><![endif]-->
+<link rel="icon" href="Pictures/favicon.ico">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+
+  body {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #6d6e71;
+    background-color: #E6E4E1;
+  }
+
+
+  input.form-control,input.form-control:focus {
+      border:none;
+      box-shadow: none;
+     -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+     -moz-transition: none;
+     -webkit-transition: none;
+  }
+
+  #Nbre_Resultats {
+    right: : 0px;
+    top: 5px;
+    color: #9F9F9E; 
+
+  }
+
+
+  #List_Name {
+    position: absolute;
+    top: 40px;
+    bottom: 30px;
+    left: 0px;
+    right: 0px;
+    overflow-y: scroll;
+    width: 97%;
+    text-decoration: none;
+    cursor: grab; 
+  }
+
+
+.person { background-color: #E6E4E1; }
+
+  .border-3 {
+      border-width:3px !important;
+  }
+
+  table {
+
+      border:none;
+  }
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+  </style>
+</head>
+<body>
+
+<div class="card mx-auto" style="width: 900px; margin-top: 15px;">
+  <img class="card-img-top" src="Pictures/Banner.jpg" alt="Card image cap">
+
+  <div class="card-img-overlay card-header">
+     <h1><p class="font-weight-bold text-center text-white">Workplace Account Search</p></h1>
+  </div>
+
+  <div class="card-img-overlay "  id=Photo  name=Photo>
+        <!-- on met la photo ici -->
+
+  </div>
+
+  <div class="container " >
+    <div class="row " >
+      <div class="col-6 bg-white align-self-center"></div>
+      <div class="col-6 bg-white align-self-center"></div>
+    </div>
+
+    <div class="row border-bottom" >
+
+
+
+
+      <!-- Search Form -->
+      <div class="col-5 input-group  bg-white align-self-center ">
+        <input autofocus type="search" class="form-control" placeholder=" Employee Name..." id="Name_Field" name="Name_Field" aria-label="Employee Name"  style="outline:none; box-shadow:none; max-width:none !important" onKeyPress="if (($('#Name_Field').val()!='') && ((event.keyCode == 13))) 
+          { Pre_GoOn($('#Name_Field').val());    }">
+
+        <div class="input-group-append ">
+      
+          <button class="btn btn-lg" id="Button_Search" style="background-color:transparent; outline:none; box-shadow:none; max-width:none !important" onClick="if ($('#Name_Field').val()=='') { alert(sAnnulation);} else { Pre_GoOn($('#Name_Field').val());    }">
+                <i class="fa fa-search"></i>
+          </button>
+
+        </div>
+      </div>
+
+
+      <!-- Buttons language -->
+      <div class="col-7 bg-white align-self-center">               
+
+
+            <nav aria-label="Language">
+
+              <ul class="pagination no-margin pull-right align-middle" >
+
+                    <li class="page-item"><a class="page-link" data-toggle="tooltip" title="English" 
+                    <a href="javascript:sLang='Us';Init_Language('Us',iNbrePersonnesTrouvees_CurrentDisplay);
+                    Affichage_Details(objPerson_CurrentDisplay, sLang);"><img src="Pictures/us.png"></a></li>
+                   
+                    <li class="page-item"><a class="page-link"  data-toggle="tooltip" title="русский"  
+                    <a href="javascript:sLang='Ru';Init_Language('Ru',iNbrePersonnesTrouvees_CurrentDisplay);
+                    Affichage_Details(objPerson_CurrentDisplay, sLang);"><img src="Pictures/ru.png"></a></li>
+
+                    <li class="page-item"><a class="page-link" data-toggle="tooltip" title="Francais" 
+                    <a href="javascript:sLang='Fr';Init_Language('Fr',iNbrePersonnesTrouvees_CurrentDisplay);
+                    Affichage_Details(objPerson_CurrentDisplay, sLang);"><img src="Pictures/fr.png"></a></li>
+
+                    <li class="page-item"><a class="page-link" data-toggle="tooltip" title="Nederlands" 
+                    <a href="javascript:sLang='Nl';Init_Language('Nl',iNbrePersonnesTrouvees_CurrentDisplay);
+                    Affichage_Details(objPerson_CurrentDisplay, sLang);"><img src="Pictures/nl.png"></a></li>                  
+                    <li class="page-item"><a class="page-link" data-toggle="tooltip" title="Español" 
+                    <a href="javascript:sLang='Sp';Init_Language('Sp',iNbrePersonnesTrouvees_CurrentDisplay);
+                    Affichage_Details(objPerson_CurrentDisplay, sLang);"><img src="Pictures/sp.png"></a></li>
+
+                    <li class="page-item"><a class="page-link" data-toggle="tooltip" title="Portuguese" 
+                    <a href="javascript:sLang='Pt';Init_Language('Pt',iNbrePersonnesTrouvees_CurrentDisplay);
+                    Affichage_Details(objPerson_CurrentDisplay, sLang);"><img src="Pictures/pt.png"></a></li>
+              </ul>
+            </nav>
+      </div>
+    </div>
+
+  <!-- Left Grid -->
+  <div class="row"  >
+    <div class="col-4 bg-white border-right">
+      <div class="col py-1 no-gutters" id="Nbre_Resultats"  name="Nbre_Resultats">
+      </div>    
+      <div class="col py-1 text-dark" id="List_Name" name="List_Name  style="overflow:auto">
+        <!-- liste des utilisateurs se placera ici -->
+      </div>
+  </div>
+
+  <!-- Left Grid -->
+
+  <!-- Right Grid -->
+  <div class="col-8 bg-white" id="List_Destination"  name="List_Destination">
+    <div class="col py-1"> 
+         <div class="row border-bottom no-gutters" style="margin-top: 10px;">
+          <div class="col text-secondary ">CONTACT INFORMATION</div>
+       </div>
+    </div>
+
+    <div class="col py-1 "> 
+         <div class="row border-bottom no-gutters">
+          <div class="col-4 text-secondary ">Name</div>
+          <div class="col text-dark ">
+          </div>
+       </div>
+    </div>
+
+    <div class="col py-1 "> 
+        <div class="row border-bottom no-gutters">
+          <div class="col-4 text-secondary">Title</div>
+          <div class="col text-dark">
+          </div>
+       </div>
+    </div>
+
+    <div class="col py-1 "> 
+         <div class="row border-bottom no-gutters">
+          <div class="col-4 text-secondary">Department Name</div>
+          <div class="col text-dark">
+          </div>
+       </div>
+    </div>
+
+    <div class="col py-1 "> 
+        <div class="row border-bottom no-gutters">
+          <div class="col-4 text-secondary">Division Name</div>
+          <div class="col text-dark">
+          </div>
+       </div>
+    </div>
+
+    <div class="col py-1 "> 
+          <div class="row border-bottom no-gutters">
+          <div class="col-4 text-secondary">Organization</div>
+          <div class="col text-dark">
+          </div>
+       </div>
+    </div>
+
+    <div class="col py-1 "> 
+          <div class="row border-bottom no-gutters">
+          <div class="col-4 text-secondary">Phone</div>
+          <div class="col text-dark">
+          </div>
+       </div>
+    </div>
+
+    <div class="col py-1 "> 
+         <div class="row border-bottom no-gutters">
+          <div class="col-4 text-secondary">Email</div>
+          <div class="col text-dark">
+          </div>
+       </div>
+    </div>
+
+    <div class="col py-1 "> 
+          <div class="row border-bottom no-gutters">
+          <div class="col-4 text-secondary">Location</div>
+          <div class="col text-dark">
+          </div>
+       </div>
+    </div>
+
+    <div class="col py-1 " style="margin-bottom: 20px;"> 
+          <div class="row border-bottom no-gutters">
+          <div class="col-4 text-secondary">Manager</div>
+          <div class="col text-dark">
+          </div>
+       </div>
+    </div>
+
+  </div> <!-- Right Grid -->
+  </div>
+</div>
+  </div>
+</div>
+
+<script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous">
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+
+<script type="text/javascript" src="js/Languages.js"></script>
+
+<script language=javascript>
+
+var sAnnulation = '';
+var ObjLegende = {
+  sId:             '',
+  sName:           '',
+  sAttributeName:  '',  
+  sFr:             '',
+  sUs:             '',
+  sPt:             '',
+  sNl:             '',
+  sRu:             '',
+  sSp:             '',
+
+  Recherche: function () {
+    console.log('Non implemente');
+  }
+};
+
+/* Variables globales au fichier */
+var TableauLangues = new Array(); 
+var sLang = 'Us';  /* Langue utilisee par utilisateur */   
+var objPerson_CurrentDisplay = null;  /* Personne en ccours de display */  
+var iNbrePersonnesTrouvees_CurrentDisplay = 0;  /* Personne en ccours de display */  
+var TabObjListPerson = [];
+
+   Init_Language('Us',iNbrePersonnesTrouvees_CurrentDisplay);
+
+   function Pre_GoOn(sStartValue) {
+    //alert(sStartValue);
+      try {
+      TabObjListPerson = [];
+      sRet = GoOn(sStartValue);
+      } catch(e) {
+        alert('Pre_GoOn()  ' +e.stack);
+      }
+   }
+
+   function Post_GoOn(sText) {
+      try {
+          //alert("Post_GoOn");
+             
+          var sTmp = sText;
+          sTmp = sTmp.substr(1); 
+          sTmp = sTmp.substr(0, sTmp.length-2); 
+
+          tabListPerson = sTmp.split("},{") 
+
+          var iTmp1 = sTmp.indexOf("isReseller");
+          var sTmp1 = sTmp.substr(0, iTmp1-2)+"}"; 
+
+
+          if ( (tabListPerson[0] == 1  ) && (iTmp1 == -1)) { 
+                /* Personne n'a été trouvée */
+                $('#List_Name').html('Non trouvée');   
+                $('#Nbre_Resultats').html('0 ' + Update_Sentences('Nbre_Resultats',sLang) );
+                objPerson_CurrentDisplay = null;
+                iNbrePersonnesTrouvees_CurrentDisplay = 0;   
+          }
+
+          if ((tabListPerson.length == 1 ) && (iTmp1 > 0)) {  
+                /* Une seule Personne été trouvée */
+                sTmp = "{" + sTmp;
+               var iTmp1 = sTmp.indexOf("isReseller");
+               var sTmp1 = sTmp.substr(0, iTmp1-2)+"}"; 
+
+                console.log('length:'+sTmp.length);
+
+                console.log('JSON:'+sTmp1);
+                var objPerson = JSON.parse(sTmp1);  
+                $('#Nbre_Resultats').html(sTmp);  
+                sTmp = '1 ' + Update_Sentences('Nbre_Resultats',sLang) ;
+                $('#Nbre_Resultats').html(sTmp);
+
+                sTmp = ""; 
+                if ( objPerson.more.isActive == false) {
+                   sTmp = sTmp + '<br><s>'+ objPerson.name.name+'</s>';
+                } else {
+                   sTmp = sTmp + '<br>'+ objPerson.name.name;
+                }
+
+                $('#List_Name').html(sTmp);   
+
+                Affichage_Details(objPerson, sLang);
+                RetrievePhoto(objPerson, sLang);
+                objPerson_CurrentDisplay = objPerson;
+                iNbrePersonnesTrouvees_CurrentDisplay = 1;
+                
+          } /* end if ( tabListPerson.length == 1 ) */
+
+          if ( tabListPerson.length > 1 ) {  /* n Personnes ont été trouvées */
+             for ( i=0;i<tabListPerson.length;i++ ) {
+
+                if ( i==tabListPerson.length-1) {
+                   var iTmp1 = tabListPerson[i].indexOf("\"communities\":[]}],");
+                   tabListPerson[i] = tabListPerson[i].substr(0, iTmp1-1); 
+                }
+
+                var objPerson = JSON.parse("{"+tabListPerson[i]+"}");  
+                TabObjListPerson.push(objPerson);          
+             } /* end for ( i=0;i<tabListPerson.length;i++ ) { */
+
+             TabObjListPerson.sort(CompareListPerson);
+
+             objPerson_CurrentDisplay = TabObjListPerson[0];
+             sTmp = Update_Sentences('Nbre_Resultats',sLang) ;
+             $('#Nbre_Resultats').html(' '+sTmp + ' '+(TabObjListPerson.length+1));  
+             var sTmp = ""; 
+             for ( i=0;i<TabObjListPerson.length;i++ ) {
+
+                if ( TabObjListPerson[i].more.isActive == false) {
+                   sTmp = sTmp + '<div name=user' +i+ ' class=\"col py-2 text-dark\" >'; 
+                   sTmp = sTmp + '<a onclick=\"javascript:PreDisplayPersonDetail('+i+');\"><s>';
+                   sTmp = sTmp +TabObjListPerson[i].name.name+'</s></a>'
+                } else {
+                   sTmp = sTmp + '<div name=user' +i+ ' class=\"col py-2 text-dark\" >'; 
+                   sTmp = sTmp + '<a onclick=\"javascript:PreDisplayPersonDetail('+i+');\">';
+                   sTmp = sTmp +TabObjListPerson[i].name.name+'</a>'
+                }
+
+                sTmp = sTmp + "</div>";
+             } /* end for ( i=0;i<TabObjListPerson.length-1;i++ ) */
+
+             $('#List_Name').html(sTmp); 
+             Affichage_Details(TabObjListPerson[0], sLang);
+             RetrievePhoto(TabObjListPerson[0], sLang);
+
+             sTmp = Update_Sentences('Nbre_Resultats',sLang) ;
+             $('#Nbre_Resultats').html(('&nbsp; '+TabObjListPerson.length) + ' '+sTmp);  
+             $( "div[name=user0]").addClass( "person" );
+             iNbrePersonnesTrouvees_CurrentDisplay = TabObjListPerson.length;
+
+          } /* end if ( tabListPerson.length > 1 ) */
+      } catch(e) {
+        alert('Post_GoOn()  ' +e.stack);
+      } finally  {
+
+      }
+      return(false);
+   }  /* end Post_GoOn(sText) */
+
+   function CompareListPerson(a,b) {
+      var a_value = "";
+      var b_value = "";
+      var i = 0;
+
+    if (a.hasOwnProperty("name.familyName") == true) a_value = a.name.familyName;
+    //console.log("1  "+a_value + "    " +a.name.familyName + "     "+ a.email);  
+    if ((a_value == "") & (a.hasOwnProperty("email")  == true)) {
+       //console.log("1-oui "+a_value);
+       i = a.email.indexOf("@");
+       //console.log("1a-oui "+i);       
+
+       if ( i != -1) {  a_value = a.email.substr(0,i);  }
+       //console.log("2-oui "+a_value);   
+       i = a_value.indexOf(".");
+       if ( i != -1) {  a_value = a_value.substr(i+1);  }
+       //console.log("3-oui "+a_value);   
+    }
+    //console.log("2  "+a_value ); 
+    if (b.hasOwnProperty("name.familyName") == true) b_value = b.name.familyName;
+    if ((b_value == "") & (b.hasOwnProperty("email")  == true)) {
+       //console.log("1-oui "+b_value);
+       i = b.email.indexOf("@");
+       //console.log("1a-oui "+i);       
+
+       if ( i != -1) {  b_value = b.email.substr(0,i);  }
+       //console.log("2-oui "+b_value);   
+       i = b_value.indexOf(".");
+       if ( i != -1) {  b_value = b_value.substr(i+1);  }
+       //console.log("3-oui "+b_value);   
+    }
+
+    /* 14/02/2019 MCH >>>>  Tri ensuite par nom */
+    if ((a.name).hasOwnProperty("firstName") == true)  { 
+       a_value = a_value + " " + a.name.firstName;
+    } else {
+       a_value = a_value + " #" ;      
+    }
+
+    if ((b.name).hasOwnProperty("firstName") == true)  { 
+       b_value = b_value + " " + b.name.firstName;
+    } else {
+       b_value = b_value + " #" ;      
+    }
+
+    /* 14/02/2019 MCH <<<<  Tri ensuite par nom */
+
+    a_value = a_value.toLowerCase();
+    b_value = b_value.toLowerCase();
+
+    console.log("compare  "+a_value + "   " + b_value);  
+
+    if (a_value < b_value)
+       return -1;
+    if (a_value > b_value)
+        return 1;
+     return 0;
+
+
+}
+   function PreDisplayPersonDetail(iIndexPerson) {
+      $( "div[name^=user]" ).removeClass( "person" );  
+      $( "div[name=user"+iIndexPerson+"]").addClass( "person" );
+       objPerson_CurrentDisplay = TabObjListPerson[iIndexPerson];
+       if (TabObjListPerson[iIndexPerson].hasOwnProperty('photoCode64') == false) {
+          /* On recherche la photo si on ne l'a pas... */
+          RetrievePhoto(TabObjListPerson[iIndexPerson], sLang);
+       }
+       Affichage_Details(TabObjListPerson[iIndexPerson], sLang);
+   }
+
+   function  Affichage_Details(objPerson, sLanguage) {
+
+     var sTmp = DisplayPersonDetail(objPerson, sLanguage);
+     $('#List_Destination').html(sTmp);   
+
+     if (( objPerson != null) && ( objPerson.photoCode64 != null)) {
+        var sImg = '<img  width=\"133\" height=\"133\"  class=\"img-thumbnail\"   src=\'data:image/jpg;base64,'+objPerson.photo+'\'>';
+        $('#Photo').html(sImg); 
+     } else {
+        $('#Photo').html('');          
+     }
+
+   } /* end Affichage_Details(..) */
+
+
+
+    /* Maxime Choucroun   06/12/2018              */
+    /*                                            */
+    /* Ce fichier a pour but de gérer les interaction avec la AWS Lambda         */
+    /* Cette derniere est appelée d'ici,                                         */
+    /* La reception des data se fait aussi ici, par la fonction Post_GoOn(...)   */
+
+
+    /* Url d'appel de la AWS Lambda */
+    /* On a rajouté un parametre startname qui indique le début des noms à rechercher    */
+    /* Le nombre de résultats maximum est dans le parametremetrage de la fonction Lambda */ 
+    /* La fonction Lambda s'appelle "MyFirstLambda" et devra etre renommée. Deviner pourquoi ? */
+    var Url_Serverless = "https://tixjamou65.execute-api.eu-west-1.amazonaws.com/dev/requeststartname?startname=";
+
+
+var GoOn = function(sStartName) {
+// Request (14) (GET https://iknyt8x8bc.execute-api.eu-west-2.amazonaws.com/dev/requeststartname)
+
+   sRet = "";
+    //  alert("GoOn"); 
+
+   jQuery.ajax({
+      url: Url_Serverless+sStartName,
+      type: "GET",
+      timeout: 5000,
+      headers: {"x-api-key" : "TnpCh9k8Bg83LL4MR92Ck8TUIPzjzCiq1dz3Dohq"}
+
+   }).done(function(data, textStatus, jqXHR) {
+      console.log("GoOn(..)  HTTP Request Succeeded: " + jqXHR.status);
+      console.log("GoOn(..)  Le message est:"+data.message + "   "+ data.ListPerson);
+      
+      Post_GoOn( data.ListPerson);  /* Gestion des resultats ici !!! */ 
+     // alert("done");       
+   }).fail(function(jqXHR, textStatus, errorThrown) {
+      console.log("HTTP Request Failed");
+    //  alert("fail"); 
+   }).always(function() {
+      return;
+   });
+     // alert("end GoOn"); 
+};
+
+    /* Url d'appel de la AWS Lambda pour la photo */
+    /* On a rajouté un parametre startname qui indique le début des noms à rechercher    */
+    /* Le nombre de résultats maximum est dans le parametremetrage de la fonction Lambda */ 
+    /* La fonction Lambda s'appelle "MyFirstLambda" et devra etre renommée. Deviner pourquoi ? */
+    var Url_ServerlessPicture = "https://tixjamou65.execute-api.eu-west-1.amazonaws.com/dev/requestpicture?pictureurl=";
+
+function RetrievePhoto(objPerson)  {
+
+// Request (14) (GET https://iknyt8x8bc.execute-api.eu-west-2.amazonaws.com/dev/requestpicture)
+
+// Request objPerson.name.picture
+      console.log("RetrievePhoto(...):"); 
+
+   sRet = "";
+   console.log("encodeURIComponent(;;;):"+Url_ServerlessPicture+encodeURIComponent((objPerson.name.picture)));
+
+   jQuery.ajax({
+      url: Url_ServerlessPicture+encodeURIComponent((objPerson.name.picture)),
+      type: "GET",
+      timeout: 5000,
+      headers: {"x-api-key" : "TnpCh9k8Bg83LL4MR92Ck8TUIPzjzCiq1dz3Dohq"}
+
+
+   }).done(function(data, textStatus, jqXHR) {
+      console.log("HTTP Request Succeeded: " + jqXHR.status);
+      console.log("Le message est:"+data.message );
+      
+     Post_RetrievePhoto( data.picture, objPerson);  /* Gestion des resultats ici !!! */ 
+     // alert("done");       
+   }).fail(function(jqXHR, textStatus, errorThrown) {
+      console.log("HTTP Request Failed");
+    //  alert("fail"); 
+   }).always(function() {
+      return;
+   });
+
+};
+
+function Post_RetrievePhoto(PictureBinary, objPerson)  {
+
+   console.log("Post_RetrievePhoto " );
+   objPerson.photo = PictureBinary;
+
+ 
+  // console.log(objPerson.photoCode64);
+   objPerson.photoCode64 = PictureBinary;;
+
+
+   /* Raffraichissement de l'affichage */
+   Affichage_Details(objPerson, sLang)
+}
+
+
+
+</script>
+
+<div class="fixed-bottom "><p class="text-black-50 text-right">@DANIS Digital Enterprise 2019&nbsp;</p></div>
+
+</body>
+</html>
+

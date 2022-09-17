@@ -1,0 +1,1212 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Business Design and Prototype - Process</title><link rel=stylesheet href=./../Common/Css_Main>
+
+<!-- 
+function ws(str)
+{
+	window.status=str;
+}
+
+function openwin(URL)
+{	
+	window.open(URL, "", "resizable=yes, scrollbars=yes, directories=yes, status=yes, location=yes, toolbar=yes, menubar=yes, titlebar=yes, width=800, height=600");
+}
+
+function fermer()
+{
+	window.close();
+}
+// -->
+
+
+
+<!-- 
+document._domino_target = "_self";
+function _doClick(v, o, t) {
+  var returnValue = false;
+  var url="/Applications/Themis/Central/ptprcmod.nsf/VWMainProcessModel/0aaf4c05d2f312e8c12568aa005732b8?OpenDocument&Click=" + v;
+  if (o.href != null) {
+    o.href = url;
+    returnValue = true;
+  } else {
+    if (t == null)
+      t = document._domino_target;
+    window.open(url, t);
+  }
+  return returnValue;
+}
+// -->
+
+</head>
+<body text="#000000" bgcolor="#FFFFFF">
+
+<form action=""><BODY leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+<BR>
+<TABLE border="0" cellspacing="0" cellpadding="0" width="700px">
+<TR>
+	<TD CLASS="hightitle">Process</TD>
+</TR>
+</TABLE>
+<BR><br>
+<a name="_Section1"></a><img height="16" width="16" src="./../Common/collapse.gif" border="0" alt="Hide details for Process Header"></a><b><font color="#ff8100">Process Header</font></b><TABLE border="0" cellspacing="0" cellpadding="0" width="700px">
+<TR>
+	<TD width="350px" CLASS="contenutitle">Phase : </TD>	
+	<TD width="350px" CLASS="contenutitle"></TD>
+</TR>
+<TR>
+	<TD width="350px" CLASS="contenunormal">Core System - Design & Build  (4b)</TD>	
+	<TD width="350px" CLASS="contenunormal"></TD>
+</TR>
+<TR>
+	<TD width="350px" CLASS="contenutitle">Team : </TD>	
+	<TD width="350px" CLASS="contenutitle">WBS Ref : </TD>
+</TR>
+<TR>
+	<TD width="350px" CLASS="contenunormal">Central - Supply Chain - Inventory Management</TD>	
+	<TD width="350px" CLASS="contenunormal">Process Design</TD>
+</TR>
+<TR>
+	<TD width="350px" CLASS="contenutitle">Responsible - Business Owner : </TD>	
+	<TD width="350px" CLASS="contenutitle"></TD>
+</TR>
+<TR>
+	<TD width="350px" CLASS="contenunormal">Ruxandra ISPAS</TD>	
+	<TD width="350px" CLASS="contenunormal"></TD>
+</TR>
+<TR>
+	<TD width="350px" CLASS="contenutitle">Business Designer : </TD>	
+	<TD width="350px" CLASS="contenutitle">Sort Sequence : </TD>
+</TR>
+<TR>
+	<TD width="350px" CLASS="contenunormal">Jiri SUSANEK</TD>	
+	<TD width="350px" CLASS="contenunormal">IN-05</TD>
+</TR>
+</TABLE>
+<HR><TABLE border="0" cellspacing="0" cellpadding="0" width="700px">
+<TR>
+	<TD width="100px" CLASS="contenutitle">Status : </TD>
+	<TD width="250px" CLASS="contenunormal">30 Complete</TD>
+	<TD width="100px" CLASS="contenutitle">Version : </TD>
+	<TD width="250px" CLASS="contenunormal"></TD>
+</TR>
+</TABLE>
+<TABLE border="0" cellspacing="0" cellpadding="0" width="700px">
+<TR>
+	<TD width="100px" CLASS="contenutitle">Core Process : </TD>	
+	<TD CLASS="contenunormal">Inventory</TD>
+</TR>
+<TR>
+	<TD CLASS="contenutitle">Process : </TD>	
+	<TD CLASS="contenunormal"><B>IN - Count inventory & period closing tasks</B></TD>
+</TR>
+<TR>
+	<TD CLASS="contenutitle">Comment : </TD>	
+	<TD CLASS="contenunormal"></TD>	
+</TR>
+</TABLE>
+<HR>
+<p><a name="_Section2"></a><img height="16" width="16" src="./../Common/collapse.gif" border="0" alt="Hide details for Process Design (To - Be)"></a><b><font color="#ff8100">Process Design (To - Be)</font></b><br>
+<br>
+<b><u><font face="Arial">Main changes</font></u></b><br>
+
+<ul>
+<ul type="disc">
+<li>Homogenisation of the movement types, accout allocations
+<li>Labelling + Radio Frequency scanning</ul>
+</ul>
+<br>
+<br>
+<br>
+<b><u><font face="Arial">Prerequesite</font></u></b><br>
+
+<ul>
+<ul type="disc">
+<li>Warehouse structure codification
+<li>Barcode devices
+<li>Radiofrequency devices
+<li>Label printers
+<li>Cabling</ul>
+</ul>
+</TD>	
+<br>
+<a name="_Section2.2"></a><img height="16" width="16" src="./../Common/collapse.gif" border="0" alt="Hide details for Process Schematic : "></a><b><font color="#00c1c2">Process Schematic : </font></b><TABLE border="0" cellspacing="0" cellpadding="0" width="700px">
+<TR>
+	<TD CLASS="contenunormal">
+<ul><br>
+<br>
+<br>
+<br>
+<img src="/0.31FA_OpenElement&amp;FieldElemFormat.gif" width="593" height="563"></TD>	
+</TR>
+</TABLE></ul>
+<br>
+<br>
+<a name="_Section2.3"></a><img height="16" width="16" src="./../Common/collapse.gif" border="0" alt="Hide details for Process Description"></a><b><font color="#00c1c2">Process Description</font></b><TABLE border="0" cellspacing="0" cellpadding="0" width="700px">
+<TR>
+	<TD CLASS="contenunormal">
+<p><br>
+<b><font size="4" color="#800000" face="Book Antiqua">OBJECTIVES</font></b><br>
+
+<ul type="disc">
+<li><font face="Book Antiqua">Maintain the accuracy of the book to actual inventory quantities</font>
+<li><font face="Book Antiqua">Identify differences between physical stock and stock on hand in the system and update the system</font>
+<li><font face="Book Antiqua">Investigate differences and close any gaps in other operational processes that cause the shrinkage</font>
+<li><font face="Book Antiqua">Notify the relevant managers of their shrinkage figures and to highlight various problem areas within the various material categories</font>
+<li><font face="Book Antiqua">Have a physical inventory process that is carried out on a regular basis (to avoid any distorsion in the other operations)</font></ul>
+<br>
+<br>
+<u><font size="5" face="Book Antiqua">                                                                                                                                                                                                                                             </font></u><br>
+<b><font size="4" color="#800000" face="Book Antiqua">PROCESS STEP SUMMARY</font></b><br>
+
+<ul><b><u><font face="Times New Roman">1) Physical inventory methods</font></u></b><br>
+
+<ul type="disc">
+<li><b><i><font face="Times New Roman">Criteria for physical inventory methods and frequency determination</font></i></b>
+<ul>
+<ol type="1">
+<li><font face="Times New Roman">World Business Unit</font>
+<li><font face="Times New Roman">Type of materials (Raws &amp; Packs, finished products)</font>
+<li><font face="Times New Roman">Type of storage (Racks/main storage, Picking zones, &quot;on-line&quot;)</font></ol>
+</ul>
+</ul>
+<br>
+
+<ul type="disc">
+<li><b><i><font face="Times New Roman">Physical inventory methods</font></i></b></ul>
+
+<ul>
+<ul>
+<ol type="1">
+<li><i><font face="Times New Roman">Full physical inventory</font></i>
+<ul>
+<ol type="1">
+<li><font face="Times New Roman">All materials counted physically at a certain date</font>
+<li><font face="Times New Roman">Counting can be organised by :</font>
+<ul>
+<ul>
+<ol type="1">
+<li><font face="Times New Roman">family of products</font>
+<li><font face="Times New Roman">storage areas</font></ol>
+</ul>
+</ul>
+</ol>
+</ul>
+</ol>
+<br>
+<i><font face="Times New Roman">2.    Cycle counting</font></i>
+<ul>
+<ul>
+<ol type="1">
+<li><font face="Times New Roman">Inventory counted at regular intervals</font>
+<li><font face="Times New Roman">Cycle counting based on the materials ABC classification</font>
+<li><font face="Times New Roman">ABC classification : </font>
+<ul>
+<ul>
+<ol type="1">
+<li><font face="Times New Roman">Based on :</font>
+<ul>
+<ul>
+<ol type="1">
+<li><font face="Times New Roman">Stock turns</font>
+<li><font face="Times New Roman">Value</font>
+<li><font face="Times New Roman">Family of product (family of raws or type of products in picking)</font>
+<li><font face="Times New Roman">Replenishment leadtime</font></ol>
+</ul>
+</ul>
+
+<li><font face="Times New Roman">Determined :</font>
+<ul>
+<ul>
+<ol type="1">
+<li><font face="Times New Roman">Automatically </font>
+<ul>
+<ul><font face="Times New Roman">At the end of the fiscal year, automatic calculation program is used.</font><br>
+<font face="Times New Roman">Criteria used by the program : stock turns and value</font></ul>
+</ul>
+</ol>
+<font face="Times New Roman">2.    Manually </font>
+<ul>
+<ul>
+<ul><font face="Times New Roman">Classification can be changed manually during the fiscal year, taking into account :</font>
+<ul>
+<ul><font face="Times New Roman">- family of product</font><br>
+<font face="Times New Roman">- replenishment leadtime</font></ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ol>
+<font face="Times New Roman">3.    Checked and set by Logistics people</font><br>
+</ul>
+</ul>
+</ol>
+<font face="Times New Roman">4.     Inventory counting frequency defined by ABC classification</font>
+<ul>
+<ul>
+<ul><font face="Times New Roman">The more materials are critical (eg. the higher turnover is), the higher the cycle counting frequency is</font></ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+<br>
+
+<ul>
+<ul><i><font face="Times New Roman">3.    Full/Empty strategy</font></i>
+<ul>
+<ul>
+<ol type="1">
+<li><font face="Times New Roman">In warehouse with bins management</font>
+<li><font face="Times New Roman">Physical inventory performed at the &quot;full/empty&quot; level </font>
+<li><font face="Times New Roman">In case of discrepancies, identification of the bin, pallet and product</font></ol>
+</ul>
+</ul>
+<i><font face="Times New Roman">4.   Physical zone-based counting</font></i>
+<ul>
+<ul>
+<ol type="1">
+<li><font face="Times New Roman">In warehouse with bins management</font>
+<li><font face="Times New Roman">Materials counted at different periods based on their physical position (storage area/aisles/rows/columns)</font>
+<li><font face="Times New Roman">Frequency of each inventory area defined by Warehouse Manager</font></ol>
+</ul>
+</ul>
+<br>
+<br>
+<br>
+</ul>
+<b><u><font face="Times New Roman">2) Physical inventory steps</font></u></b><br>
+<br>
+
+<ul type="disc">
+<li><font face="Times New Roman">Determine the physical inventory method to use and the products/area/class to count</font>
+<li><font face="Times New Roman">Prepare inventory :</font>
+<ul>
+<ul>
+<ol type="1">
+<li><font face="Times New Roman">Organise the counting process</font>
+<li><font face="Times New Roman">Print the work list</font>
+<ul>
+<ul>
+<ol type="1">
+<li><font face="Times New Roman">Blind physical inventory (without quantity)</font>
+<li><font face="Times New Roman">Two exceptions : Full/Empty counting + Quick inventory of the main storage</font></ol>
+</ul>
+</ul>
+
+<li><font face="Times New Roman">Block inventory/selected areas for goods movements</font>
+<li><font face="Times New Roman">Freeze inventory</font>
+<ul>
+<ul><font face="Times New Roman">Not to impact the inventory relevant to the physical inventory by materials movement and to have the right references for the differences posting</font></ul>
+</ul>
+</ol>
+<font face="Times New Roman">5.    Dispatch the work based on physical organisation</font></ul>
+</ul>
+
+<li><font face="Times New Roman">Count inventory</font>
+<ul>
+<ul>
+<ol type="1">
+<li><font face="Times New Roman">Data to check depending on the storage categories:</font>
+<ul>
+<ul>
+<ol type="1">
+<li><font face="Times New Roman">Quantity</font>
+<li><font face="Times New Roman">Pallet number</font>
+<li><font face="Times New Roman">Material number</font>
+<li><font face="Times New Roman">Number of boxes</font>
+<li><font face="Times New Roman">Number of units</font>
+<li><font face="Times New Roman">DLC or DLUO</font></ol>
+</ul>
+</ul>
+
+<li><font face="Times New Roman">Recount if necessary</font>
+<li><font face="Times New Roman">Print new label if old label doesn't fit the content</font>
+<li><font face="Times New Roman">Barcode scanning/radio frequency used during physical counting</font></ol>
+</ul>
+</ul>
+
+<li><font face="Times New Roman">Enter count results and analyse results/differences</font>
+<li><font face="Times New Roman">Post differences</font>
+<ul>
+<ul>
+<ol type="1">
+<li><font face="Times New Roman">Validation, depending on the differences value, by :</font>
+<ul>
+<ul>
+<ol type="1">
+<li><font face="Times New Roman">Warehouse staff</font>
+<li><font face="Times New Roman">Logistics Manager</font>
+<li><font face="Times New Roman">Finance</font></ol>
+</ul>
+</ul>
+
+<li><font face="Times New Roman">Differences posting tolerances defined at user level to manage validation authorisation</font></ol>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+<u><font size="5">                                                                                                                                                                                              </font></u>
+<ul>
+<ul>
+<ul></ul>
+</ul>
+</ul>
+<br>
+<br>
+<b><font size="4" color="#800000" face="Book Antiqua">BUSINESS PROCESS DESCRIPTION</font></b><br>
+<br>
+<br>
+<font face="Book Antiqua">Physical inventories are required to ensure that the inventory quantities and values in the system are accurate. </font><br>
+<font face="Book Antiqua">The physical inventory of the warehouse must be carried out at least once per fiscal year to balance its inventory.</font><br>
+<font face="Book Antiqua">It allows then to reduce the surprise &quot;Out of stock&quot; conditions that can :</font>
+<ul>
+<ul>
+<ol type="1">
+<li><font face="Book Antiqua">Prevent Manufacturing operations</font>
+<li><font face="Book Antiqua">Prevent shipping</font>
+<li><font face="Book Antiqua">Create internal delay (search for materials...)</font></ol>
+</ul>
+</ul>
+<br>
+<font face="Book Antiqua">The physical inventory process described below can be used in :</font>
+<ul>
+<ul>
+<ol type="1">
+<li><font face="Book Antiqua">Factories</font>
+<li><font face="Book Antiqua">Distribution centers</font></ol>
+</ul>
+</ul>
+<br>
+<br>
+<font face="Book Antiqua">The materials concerned by physical inventory are :</font>
+<ul>
+<ul>
+<ol type="1">
+<li><font face="Book Antiqua">Raws &amp; Packs</font>
+<li><font face="Book Antiqua">Finished products</font>
+<li><font face="Book Antiqua">Semi-finished products</font>
+<ul>
+<ul><font face="Book Antiqua">Remark : the physical inventory for Semi-finished products is the same as for Raws &amp; Packs and finished products because they are stored the same way.</font><br>
+<font face="Book Antiqua"> </font></ul>
+</ul>
+</ol>
+</ul>
+</ul>
+<br>
+<font face="Book Antiqua">The process above describes how to perform a physical inventory when :</font>
+<ul>
+<ul>
+<ol type="1">
+<li><font face="Book Antiqua">There is no bin management, only a general big location (generally for raws and packs)</font>
+<li><font face="Book Antiqua">There is bin management within the warehouse</font></ol>
+</ul>
+</ul>
+<br>
+<br>
+<br>
+<b><u><font size="4" face="Book Antiqua">1) Guiding principles</font></u></b><br>
+<br>
+<br>
+<b><i><font face="Book Antiqua">Physical inventory used by type of materials and type of storage : </font></i></b>
+<ul>
+<ul>
+<ul>
+<ul>
+<ul>
+<ul><br>
+<br>
+
+<table border="1">
+<tr valign="top"><td width="125"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td><td width="246" bgcolor="#EFEFEF"><div align="center"><b><font face="Book Antiqua">Racks / Storage</font></b><br>
+<i><font face="Book Antiqua">(management by pallet)</font></i></div></td><td width="246" bgcolor="#EFEFEF"><div align="center"><b><font face="Book Antiqua">Picking zone</font></b><br>
+<i><font face="Book Antiqua">(management by boxes, layers ou consumer units)</font></i></div></td></tr>
+
+<tr valign="top"><td width="125" bgcolor="#D2D2D2"><div align="center"><b><font face="Book Antiqua">Finished products</font></b></div></td><td width="246"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td><td width="246"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td></tr>
+
+<tr valign="top"><td width="125" bgcolor="#EFEFEF"><div align="center"><font face="Book Antiqua">Dairy Product</font><br>
+<i><font face="Book Antiqua">(3-4 days storage)</font></i></div></td><td width="246"><font face="Book Antiqua"> - Full / Empty strategy</font><br>
+<font face="Book Antiqua"> - Quantity counted </font><font color="#FF0000" face="Book Antiqua">(in fact perhaps just &quot;controlled&quot;)</font><font face="Book Antiqua"> every day</font><br>
+<font face="Book Antiqua"> + counting at the end of year</font></td><td width="246"><font face="Book Antiqua"> - Quantity counted every day, </font><font color="#FF0000" face="Book Antiqua">or with cycle counting principle (because of the 24h/24h activity).</font><br>
+<font face="Book Antiqua"> -</font><font color="#FF0000" face="Book Antiqua">  </font><font face="Book Antiqua">Level counted : generally the box (and consumer unit when a specific picking per unit exists).   </font></td></tr>
+
+<tr valign="top"><td width="125" bgcolor="#EFEFEF"><div align="center"><font face="Book Antiqua">Biscuits</font><br>
+<i><font face="Book Antiqua">(20 days storage)</font></i></div></td><td width="246"><font face="Book Antiqua"> - Cycle counting (week or month)  : </font>
+<ul><font face="Book Antiqua">by product , </font><br>
+<font face="Book Antiqua">by rack</font><br>
+<font face="Book Antiqua">by rack and product</font></ul>
+<font face="Book Antiqua">- Full counting at the end of year</font></td><td width="246"><font face="Book Antiqua"> - Cycle counting (week or month) </font></td></tr>
+
+<tr valign="top"><td width="125" bgcolor="#EFEFEF"><div align="center"><font face="Book Antiqua">Water</font></div></td><td width="246"><s><font color="#FF0000" face="Book Antiqua">-</font></s><font color="#FF0000" face="Book Antiqua"> Cycle counting</font></td><td width="246"><font color="#FF0000" face="Book Antiqua">- Cycle counting (very few volume in picking)</font></td></tr>
+
+<tr valign="top"><td width="125"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td><td width="246" bgcolor="#FFFFFF"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td><td width="246" bgcolor="#FFFFFF"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td></tr>
+
+<tr valign="top"><td width="125"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td><td width="246" bgcolor="#FFFFFF"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td><td width="246" bgcolor="#FFFFFF"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td></tr>
+
+<tr valign="top"><td width="125"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td><td width="246" bgcolor="#EFEFEF"><div align="center"><b><font face="Book Antiqua">Storage</font></b></div></td><td width="246" bgcolor="#EFEFEF"><div align="center"><b><font face="Book Antiqua">Intermediary stock / &quot;on line&quot;</font></b></div></td></tr>
+
+<tr valign="top"><td width="125" bgcolor="#D2D2D2"><div align="center"><b><font face="Book Antiqua">Raws &amp; Packs</font></b></div></td><td width="246"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td><td width="246"><img width="1" height="1" src="/icons/ecblank.gif" border="0" alt=""></td></tr>
+
+<tr valign="top"><td width="125" bgcolor="#EFEFEF"><div align="center"><font face="Book Antiqua">Dairy Product</font></div></td><td width="246"><font face="Book Antiqua"> - Full counting weekly (over a week) </font><font color="#FF0000" face="Book Antiqua">very often per family : milk, packs, ingredients ...</font><font face="Book Antiqua"> </font><br>
+<font face="Book Antiqua"> - For some, counting every day</font><br>
+<font face="Book Antiqua"> - Manual &amp; automatic counting</font></td><td width="246"><font face="Book Antiqua">- </font><font face="Book Antiqua">Full counting weekly (over a week) or every day </font><br>
+<font face="Book Antiqua">- Level counted : storage unit (box,kg, m², ..)</font><br>
+<font face="Book Antiqua">- Manual &amp; automatic counting </font></td></tr>
+
+<tr valign="top"><td width="125" bgcolor="#EFEFEF"><div align="center"><font face="Book Antiqua">Biscuits</font></div></td><td width="246"><font face="Book Antiqua">- Bulk counted every day</font><br>
+<font face="Book Antiqua">- Cycle couting (day or week) for some products defined manually</font><br>
+<font face="Book Antiqua">- Full counting every month</font></td><td width="246"><font face="Book Antiqua"> Cycle couting (day) for some products defined manually</font><br>
+<font face="Book Antiqua">- Full counting every month</font><br>
+<font face="Book Antiqua">- Level counted : storage unit (box,kg, m², ..) </font></td></tr>
+
+<tr valign="top"><td width="125" bgcolor="#EFEFEF"><div align="center"><font face="Book Antiqua">Water</font></div></td><td width="246"><font color="#FF0000" face="Book Antiqua">- Cycle counting (month) defined manually</font></td><td width="246"><font color="#FF0000" face="Book Antiqua">- Cycle counting (month) defined manually</font></td></tr>
+</table>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+<br>
+<br>
+
+<ul>
+<ul>
+<ul>
+<ul><b><font size="4" face="Book Antiqua">1-1) </font></b><b><u><font size="4" face="Book Antiqua">Guiding principles</font></u></b></ul>
+</ul>
+</ul>
+</ul>
+<br>
+
+<ul type="disc">
+<li><font face="Book Antiqua">2 physical inventory methods will be used :</font>
+<ul>
+<ul>
+<ol type="1">
+<li><i><font face="Book Antiqua">Full physical counting</font></i>
+<ul>
+<ul><font face="Book Antiqua">All materials must be physically counted at a certain date (eg. the end of the fiscal year) </font><br>
+<font face="Book Antiqua">The full physical counting may be limited to a family of materials (in particular for raws materials) in order to allow the repartition of the counting activity all along an inventory cycle (the week for example).</font><br>
+<font color="#FF0000" face="Book Antiqua">The full physical counting may be limited by area (zone) in the warehouse.</font><font color="#FF0000"> </font><font color="#FF0000" face="Book Antiqua"> </font><br>
+<font face="Book Antiqua">During the counting, the entire warehouse</font><font color="#FF0000" face="Book Antiqua"> (zone) </font><font face="Book Antiqua">must be blocked for materials movement.</font><br>
+<font face="Book Antiqua"> </font></ul>
+</ul>
+</ol>
+<i><font face="Book Antiqua">2.    Cycle counting</font></i>
+<ul>
+<ul>
+<ul><font face="Book Antiqua">Inventory is counted at regular intervals within the fiscal year.</font><br>
+<font face="Book Antiqua">All materials will be classified as A, B, C based upon:</font>
+<ul>
+<ul>
+<ul type="disc">
+<li><font color="#FF0000" face="Book Antiqua">stock turnover</font>
+<li><font color="#FF0000" face="Book Antiqua">value</font>
+<li><font color="#FF0000" face="Book Antiqua">family of product</font>
+<li><font color="#FF0000" face="Book Antiqua">replenishment lead time (to be confirmed)</font></ul>
+</ul>
+</ul>
+<font face="Book Antiqua">The frequency of the counting for each class is then determined.</font><br>
+<font face="Book Antiqua">The higher the turnover is, the more frequently the material is counted because possibility of stock's differences is higher when turnover is higher.</font><br>
+<br>
+<i><font face="Book Antiqua">Inventory counting frequencies proposal : </font></i><br>
+<br>
+
+<table border="1">
+<tr valign="top"><td width="198"><div align="center"><b><font face="Book Antiqua">Product classification</font></b></div></td><td width="189"><div align="center"><b><font face="Book Antiqua">Inventory Turn</font></b></div></td><td width="189"><div align="center"><b><font face="Book Antiqua">Inventory freguency</font></b></div></td></tr>
+
+<tr valign="top"><td width="198"><div align="center"><font face="Book Antiqua">A</font></div></td><td width="189"><div align="center"><font face="Book Antiqua">The biggest</font></div></td><td width="189"><div align="center"><font face="Book Antiqua">every month</font></div></td></tr>
+
+<tr valign="top"><td width="198"><div align="center"><font face="Book Antiqua">B</font></div></td><td width="189"><div align="center"><font face="Book Antiqua">Midle</font></div></td><td width="189"><div align="center"><font face="Book Antiqua">every 3 month</font></div></td></tr>
+
+<tr valign="top"><td width="198"><div align="center"><font face="Book Antiqua">C</font></div></td><td width="189"><div align="center"><font face="Book Antiqua">Low</font></div></td><td width="189"><div align="center"><font face="Book Antiqua">every 6 month</font></div></td></tr>
+</table>
+<font color="#FF0000" face="Book Antiqua"> </font><br>
+<font color="#FF0000" face="Book Antiqua">Option &quot;manual classification&quot; : ABC classification may be defined manually, for example :</font><br>
+<font color="#FF0000" face="Book Antiqua">	- to identify 2 types of products in picking</font><br>
+<font color="#FF0000" face="Book Antiqua">	- to identify several families of raws materials.</font><br>
+<font color="#FF0000" face="Book Antiqua">	- based on value, quality/traceability requirements</font><br>
+<font color="#FF0000" face="Book Antiqua">	=&gt; The user could then manually choice a class, and ask for it's inventory.</font><br>
+<br>
+<font color="#0000FF" face="Book Antiqua"> </font><i><font face="Book Antiqua">Advantages</font></i>
+<ul>
+<ul>
+<ul type="disc">
+<li><font face="Book Antiqua">This strategy allows to have correct stock level without regulary organizing &quot;Full physical inventory&quot; .</font></ul>
+</ul>
+</ul>
+<br>
+<i><font face="Book Antiqua">Disadvantages </font></i>
+<ul>
+<ul>
+<ul type="disc">
+<li><font face="Book Antiqua">All the storage positions are not controlled (eg : empty bins or some storage area).  The warehouse clerk may not identify the discrepancy if there is a pallet in an storage bin which is supposed to be empty.</font>
+<li><font face="Book Antiqua">This strategy can</font><s><font face="Book Antiqua"> </font></s><font face="Book Antiqua">block activities such as picking, because the class selected for the counting (and therefore blocked for movements) </font><s><font face="Book Antiqua">may be stored in different areas</font></s></ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+
+<ul>
+<ul>
+<ul><font face="Book Antiqua">		</font><i><font face="Book Antiqua">Responsibility</font></i>
+<ul>
+<ul>
+<ul>
+<ul>
+<ul>
+<ul type="disc">
+<li><font face="Book Antiqua">The Logistics Team will be responsible for maintaining the ABC classification</font>
+<li><font face="Book Antiqua">Manual and automatic ABC classification analysis will be used :</font>
+<ul><font face="Book Antiqua">At the end of the fiscal year, the automatic calculation program is run</font><br>
+<font face="Book Antiqua">During the year, the classification can be changed manually</font></ul>
+
+<li><font face="Book Antiqua">At a material creation, class &quot;A&quot; is set and will be changed by the Logistics Team later on</font></ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+<br>
+
+<ul type="disc">
+<li><font face="Book Antiqua">In the case the label doesn't fit the content, another label has to be created with the right information</font></ul>
+
+<ul type="disc">
+<li><font face="Book Antiqua">Barcode scanning / radio frequency devices will be used during the physical counting (whenever possible) to avoid any manual treatment, errors and to speed up the process.         </font></ul>
+
+<ul type="disc">
+<li><font face="Book Antiqua">The inventory count will be organised based on physical organisation. </font></ul>
+
+<ul type="disc">
+<li><font color="#FF0000" face="Book Antiqua">The inventory will be blind (no quantities) with two exceptions:</font>
+<ul>
+<ul type="disc">
+<li><font color="#FF0000" face="Book Antiqua">full / empty counting</font>
+<li><font color="#FF0000" face="Book Antiqua">main storage counting for quick verifications</font></ul>
+</ul>
+</ul>
+
+<ul type="disc">
+<li><font face="Book Antiqua">For raw materials, the site may use an automatic evaluation of inventory. </font><br>
+<font face="Book Antiqua">The automatic evaluation memorizes the current stock estimation :</font>
+<ul>
+<ul>
+<ol type="1">
+<li><font face="Book Antiqua">case of materials globally managed in stock (without any specification) : &quot;last inventory + receptions - estimation of consumption (fabrication x components)&quot;.</font>
+<li><font face="Book Antiqua">case of containers : every container contains an history of process messages = beginning and end of use (with notification of the used weight); if the last control of weight has not be done for a container, a theoritical one is generated : &quot;last control weight - used weights&quot;.</font></ol>
+</ul>
+</ul>
+</ul>
+
+<ul type="disc">
+<li><font face="Book Antiqua">For milk inventory, the user notifies the different quantities with the associated rates of fat and protein (in order to evaluate the equivalent quantity of &quot;milk zero&quot;, + weights of fat and protein).</font><br>
+<font face="Book Antiqua">When the site has some white mass still present in the process during the counting (case of dairy products), the quantity of mass is multiplied by the theoritical components, in order to add the equivalent translation (milk zero, fat, protein) to the inventory. </font></ul>
+
+<ul type="disc">
+<li><font face="Book Antiqua">In case of external management of  warehouse, the inventory description is received via specific interface; this description may be detailed per DLC or DLUO, per pallet ..., according to the expected functions of stock control, tracking of pallets...</font></ul>
+<br>
+<br>
+
+<ul>
+<ul><b><font size="4" face="Book Antiqua">	1-2) </font></b><b><u><font size="4" face="Book Antiqua">Guiding principles without bin management</font></u></b></ul>
+</ul>
+<br>
+
+<ul type="disc">
+<li><font face="Book Antiqua">In case of stock management by location, the physical inventory is performed with Materials Management (MM) module.</font>
+<li><font face="Book Antiqua">The counting is organized by :</font>
+<ul>
+<ul>
+<ol type="1">
+<li><font face="Book Antiqua">storage location</font>
+<li><font face="Book Antiqua">material number</font></ol>
+</ul>
+</ul>
+
+<li><font face="Book Antiqua">The warehouse manager will have to organize the physical inventory work so that all the storage position with the materials planned for counting are actually taken into account in the counting by the warehouse staff</font>
+<ul>
+<ul><font face="Book Antiqua">	</font>
+<ul>
+<ul>
+<ul><font face="Book Antiqua">  </font></ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+<br>
+
+<ul>
+<ul><b><font size="4" face="Book Antiqua">	1-3) </font></b><b><u><font size="4" face="Book Antiqua">Guiding principles when bin management</font></u></b></ul>
+</ul>
+<br>
+
+<ul type="disc">
+<li><font face="Book Antiqua">In case of stock management by bin, the physical inventory is performed at the Warehouse Management (WM) level</font>
+<li><font face="Book Antiqua">The counting is organized by :</font>
+<ul>
+<ul>
+<ol type="1">
+<li><font face="Book Antiqua">storage position (bin)</font>
+<li><font face="Book Antiqua">eventually by material number</font></ol>
+</ul>
+</ul>
+
+<li><font face="Book Antiqua">Records have to be arranged by bin's position (rows or column). The user should have the possibility for sorting before the physical inventory document printing</font><font color="#FF0000" face="Book Antiqua"> </font></ul>
+
+<ul type="disc">
+<li><font face="Book Antiqua">2 physical inventory methods will be used (</font><font face="Book Antiqua">See above &quot;Guiding principles with or without WM&quot;)</font>
+<ul>
+<ul>
+<ol type="1">
+<li><i><font face="Book Antiqua">Full physical counting</font></i>
+<li><i><font face="Book Antiqua">Cycle counting</font></i></ol>
+</ul>
+</ul>
+<br>
+<font face="Book Antiqua">But for the full physical counting, there are two possible variances :                                                                                                                                                  	      1    .</font><i><font color="#FF0000" face="Book Antiqua">Full physical inventory (counting)</font></i><br>
+<i><font color="#FF0000" face="Book Antiqua">                        </font></i><font color="#FF0000" face="Book Antiqua">All materials are counted at one time. </font><i><font color="#FF0000" face="Book Antiqua"> </font></i><i><font face="Book Antiqua">                                                                                                                                                        </font></i>
+<ul>
+<ul>
+<ol type="1">
+<li><i><font face="Book Antiqua">Full / Empty strategy</font></i><font face="Book Antiqua"> (strategy of quick control) :</font>
+<ul><font face="Book Antiqua">This strategy uses the same printed physical document as the full physical inventory but the</font><font color="#0000FF" face="Book Antiqua"> </font><font face="Book Antiqua">control is done only at the Full / Empty bin level. If during the control the worker finds a bin that is supposed to be empty by the system but is physically occupied, he has to note down the following data to adjust the inventory later on : material number, expiry date, quantity, pallet number, storage bin number  </font></ul>
+</ol>
+<font face="Book Antiqua">3. </font><i><font face="Book Antiqua">  Physical zone- based counting</font></i>
+<ul>
+<ul><font face="Book Antiqua">The materials are counted at different periods (and not all materials at a certain date) based on their physical position.</font><br>
+<font face="Book Antiqua">The warehouse can be splitted into different areas. The frequency of each area inventory  is then determined by the warehouse manager. Frequency could be different for picking zone and storage area. </font>
+<ul>
+<ul></ul>
+</ul>
+<i><font face="Book Antiqua">Example : </font></i>
+<ul><font face="Book Antiqua">      </font>
+<table border="1">
+<tr valign="top"><td width="151"><div align="center"><b><font face="Book Antiqua">Period (month)</font></b></div></td><td width="151"><div align="center"><b><font face="Book Antiqua">Storage area</font></b></div></td><td width="151"><div align="center"><b><font face="Book Antiqua">Picking zone</font></b></div></td></tr>
+
+<tr valign="top"><td width="151"><div align="center"><font face="Book Antiqua">1</font></div></td><td width="151"><div align="center"><font face="Book Antiqua">A</font></div></td><td width="151"><div align="center"><font face="Book Antiqua">Yes</font></div></td></tr>
+
+<tr valign="top"><td width="151"><div align="center"><font face="Book Antiqua">2</font></div></td><td width="151"><div align="center"><font face="Book Antiqua">B</font></div></td><td width="151"><div align="center"><font face="Book Antiqua">Yes</font></div></td></tr>
+
+<tr valign="top"><td width="151"><div align="center"><font face="Book Antiqua">3</font></div></td><td width="151"><div align="center"><font face="Book Antiqua">C</font></div></td><td width="151"><div align="center"><font face="Book Antiqua">Yes</font></div></td></tr>
+
+<tr valign="top"><td width="151"><div align="center"><font face="Book Antiqua">4</font></div></td><td width="151"><div align="center"><font face="Book Antiqua">D</font></div></td><td width="151"><div align="center"><font face="Book Antiqua">Yes</font></div></td></tr>
+
+<tr valign="top"><td width="151"><div align="center"><font face="Book Antiqua">5</font></div></td><td width="151"><div align="center"><font face="Book Antiqua">A</font></div></td><td width="151"><div align="center"><font face="Book Antiqua">Yes</font></div></td></tr>
+
+<tr valign="top"><td width="151"><div align="center"><font face="Book Antiqua">6</font></div></td><td width="151"><div align="center"><font face="Book Antiqua">B</font></div></td><td width="151"><div align="center"><font face="Book Antiqua">Yes</font></div></td></tr>
+
+<tr valign="top"><td width="151"><div align="center"><font face="Book Antiqua">7</font></div></td><td width="151"><div align="center"><font face="Book Antiqua">C</font></div></td><td width="151"><div align="center"><font face="Book Antiqua">Yes</font></div></td></tr>
+
+<tr valign="top"><td width="151"><div align="center"><font face="Book Antiqua">8</font></div></td><td width="151"><div align="center"><font face="Book Antiqua">D</font></div></td><td width="151"><div align="center"><font face="Book Antiqua">Yes</font></div></td></tr>
+
+<tr valign="top"><td width="151"><div align="center"><font face="Book Antiqua">9</font></div></td><td width="151"><div align="center"><font face="Book Antiqua">A</font></div></td><td width="151"><div align="center"><font face="Book Antiqua">Yes</font></div></td></tr>
+
+<tr valign="top"><td width="151"><div align="center"><font face="Book Antiqua">10</font></div></td><td width="151"><div align="center"><font face="Book Antiqua">B</font></div></td><td width="151"><div align="center"><font face="Book Antiqua">Yes</font></div></td></tr>
+
+<tr valign="top"><td width="151"><div align="center"><font face="Book Antiqua">11</font></div></td><td width="151"><div align="center"><font face="Book Antiqua">C</font></div></td><td width="151"><div align="center"><font face="Book Antiqua">Yes</font></div></td></tr>
+
+<tr valign="top"><td width="151"><div align="center"><font face="Book Antiqua">12</font></div></td><td width="151"><div align="center"><font face="Book Antiqua">Full inventory</font></div></td><td width="151"><div align="center"><font face="Book Antiqua">Yes</font></div></td></tr>
+</table>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+<font face="Book Antiqua">	</font>
+<ul>
+<ul>
+<ul>
+<ul>
+<ul>
+<ul><i><font face="Book Antiqua">Advantages :</font></i>
+<ul type="disc">
+<li><font face="Book Antiqua">Since only one (or several) storage areas/ aisles / row / columns are concerned by the counting each time, activities such as picking are not blocked. </font>
+<li><font face="Book Antiqua">At the end of the &quot;cycle&quot;, all bins are counted.</font>
+<li><font face="Book Antiqua">This strategy allows to have correct stock level without regularly organizing &quot;Full physical inventory&quot;.</font></ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+<br>
+<br>
+<b><u><font size="4" face="Book Antiqua">2) Physical inventory steps</font></u></b><br>
+<br>
+<br>
+<font face="Book Antiqua">The physical inventory consists in :</font>
+<ul>
+<ul><font face="Book Antiqua">1.   Determine the inventory count type</font><font color="#FF0000" face="Book Antiqua"> </font><font face="Book Antiqua">(select class or area or product that will be counted)</font><br>
+<font face="Book Antiqua">2.   </font><font face="Book Antiqua">Maintain the ABC classification regulary if ABC cycle counting is selected </font><br>
+<font face="Book Antiqua">3.   Prepare inventory :</font>
+<ul>
+<ul>
+<ul>
+<ul type="disc">
+<li><font face="Book Antiqua">Organize the counting process</font>
+<li><font face="Book Antiqua">Block  selected area  </font>
+<li><font face="Book Antiqua">Print the work list</font>
+<li><font face="Book Antiqua">Dispatch the work based on physical organization</font></ul>
+</ul>
+</ul>
+</ul>
+<font face="Book Antiqua">4.   Count Inventory</font><br>
+<font face="Book Antiqua">5.   Enter count results and Analyse results / differences</font><br>
+<font face="Book Antiqua">6.   Post differences</font></ul>
+</ul>
+<br>
+<br>
+
+<ul>
+<ul>
+<ul>
+<ul><b><font face="Book Antiqua">	2-1) </font></b><b><u><font face="Book Antiqua">Determine the inventory count type</font></u></b><br>
+<br>
+</ul>
+</ul>
+</ul>
+</ul>
+<font face="Book Antiqua">Depending on the inventory count type initiated, the materials selected for the physical count are different.</font><br>
+
+<ul type="disc">
+<li><i><font face="Book Antiqua">Cycle counting </font></i>
+<li><i><font face="Book Antiqua">Full physical count</font></i><br>
+</ul>
+<font face="Book Antiqua">Mainly the recommendation is to reduce,</font><font color="#0000FF" face="Book Antiqua"> </font><font face="Book Antiqua">when possible, the number of full physical inventory count, to promote cycle counting. </font><br>
+<font face="Book Antiqua">But full physical count remains the way of work for situations such as :</font>
+<ul>
+<ul><font face="Book Antiqua">- daily inventory for dairy products.</font><br>
+<font face="Book Antiqua">- regular raw materials inventory per family  </font></ul>
+</ul>
+<br>
+<br>
+<br>
+
+<ul>
+<ul>
+<ul>
+<ul><b><font face="Book Antiqua">	2-2) </font></b><b><u><font face="Book Antiqua">Maintain the ABC classification if cycle counting</font></u></b><br>
+</ul>
+</ul>
+</ul>
+</ul>
+<br>
+<font face="Book Antiqua">In the case of a cycle counting, the first step is to initiate an ABC analysis. ABC classification has to be defined beforehand once and for all. Nevertheless, the classes can be maintained afterwards by the Logistics Team who is responsible for the ABC classification maintenance.</font><br>
+<font face="Book Antiqua">The classification  is then used during the inventory prepation :</font>
+<ul>
+<ul>
+<ul type="disc">
+<li><font face="Book Antiqua">generate cycle count lists</font>
+<li><font face="Book Antiqua">count documents</font>
+<li><font face="Book Antiqua">schedule the count events.</font></ul>
+</ul>
+</ul>
+<br>
+
+<ul type="disc">
+<li><font face="Book Antiqua">The ABC analysis will be performed either :</font>
+<ul>
+<ol type="1">
+<li><i><font face="Book Antiqua">Automatically</font></i><font face="Book Antiqua"> :  Program scanning SAP database to classify materials based on Inventory turn</font>
+<ul>
+<ul><font face="Book Antiqua">The automatic calculation will be run once a year.</font></ul>
+</ul>
+</ol>
+<font face="Book Antiqua">2.  </font><i><font face="Book Antiqua"> Manually</font></i><font face="Book Antiqua"> : manual entry at material level</font>
+<ul>
+<ul>
+<ul><font face="Book Antiqua">During the year, the Logistics team can update manually the classification of a material.</font><br>
+</ul>
+<br>
+<b><font face="Book Antiqua">	2-3) </font></b><b><u><font face="Book Antiqua">Prepare inventory</font></u></b><br>
+</ul>
+</ul>
+</ul>
+</ul>
+<br>
+<font face="Book Antiqua">Inventory preparation consists in :</font>
+<ul>
+<ul type="disc">
+<li><i><font face="Book Antiqua">Organising the counting process</font></i>
+<li><i><font face="Book Antiqua">Printing the work list</font></i><font face="Book Antiqua">, with the following data :</font>
+<ul>
+<ul>
+<ol type="1">
+<li><font face="Book Antiqua">Warehouse and the storage location in which the count is to take place</font>
+<li><font face="Book Antiqua">Bin location (if bin management)</font>
+<li><font face="Book Antiqua">When the count is to take place</font>
+<li><font face="Book Antiqua">Materials to count : material number and description</font>
+<li><font face="Book Antiqua">Quantity (optional)</font>
+<li><font face="Book Antiqua">Unit of measure</font>
+<li><font face="Book Antiqua">Expiry date</font>
+<li><font face="Book Antiqua">Stock status (blocked stock, available stock...)</font>
+<li><font face="Book Antiqua">Batch number (for materials handled in batches)</font>
+<li><font face="Book Antiqua">Special stock to be counted (supplier consignment stock...)</font>
+<li><font face="Book Antiqua">Pallet number (if barcode scanning devices)</font></ol>
+</ul>
+</ul>
+</ul>
+
+<ul type="disc">
+<li><i><font face="Book Antiqua">Dispatching the work</font></i><font face="Book Antiqua"> based on the physical organisation</font>
+<ul>
+<ul>
+<ul>
+<ul><br>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+<font face="Book Antiqua">Before starting the inventory count, one more preparation step is to Block or to Freeze the stock to avoid stock movements while counting inventory :</font>
+<ul>
+<ul>
+<li type="disc"><i><font face="Book Antiqua">Block inventory</font></i><font face="Book Antiqua"> : </font>
+<ul><font face="Book Antiqua">All stock movements are blocked within the system while the counting or recounting process occurs.</font><br>
+<font face="Book Antiqua">Once the count results are posted in the system the materials are unblocked.</font><br>
+<br>
+<font face="Book Antiqua">When materials are blocked, each time there is a goods movement (eg. goods receipt), there is a error message informing that a physical inventory is being carried out. </font></ul>
+</ul>
+
+<ul>
+<li type="disc"><i><font face="Book Antiqua">Freeze inventory</font></i><font face="Book Antiqua"> :</font>
+<ul><font face="Book Antiqua">If the count result is not posted in the system immediately after the physical count, it can be usefull to just freeze the inventory, so that inventory level relevant to the given physical inventory is not impacted by material movements (authorized in this case) in order to have the right reference for the differences posting.</font><br>
+<br>
+
+<ul><br>
+<br>
+<b><font face="Book Antiqua">	2-4) </font></b><b><u><font face="Book Antiqua">Count inventory</font></u></b><br>
+</ul>
+</ul>
+</ul>
+</ul>
+<br>
+<font face="Book Antiqua">Inventory count is the main step in the process flow :</font>
+<ul>
+<ul>
+<ol type="1">
+<li><font face="Book Antiqua">Count the inventory</font>
+<li><font face="Book Antiqua">Recount if an error occured (usually a difference between the counted quantity and the system inventory level)</font>
+<ul>
+<ul><font face="Book Antiqua">Based on the count results, a recount may be triggered and a new work list is printed with the materials to be recounted. </font></ul>
+</ul>
+</ol>
+</ul>
+</ul>
+
+<ul type="disc">
+<li><font face="Book Antiqua">Barcode inventory count will be used whenever possible to make this process more efficient.</font>
+<ul><font face="Book Antiqua">The scan must occur at the following level :</font>
+<ul>
+<ul>
+<ol type="1">
+<li><i><font face="Book Antiqua">Pallet label </font></i><font face="Book Antiqua">(pallet number and information about pallet)</font>
+<ul>
+<ul><font face="Book Antiqua">If pallet contains a different quantity from the one announced by the system, the worker must have the possibility to overwrite manually the quantity.</font></ul>
+</ul>
+</ol>
+<font face="Book Antiqua">2.  </font><i><font face="Book Antiqua"> </font></i><i><font face="Book Antiqua">Bulk</font></i><font face="Book Antiqua"> </font>
+<ul>
+<ul>
+<ul><font face="Book Antiqua">If the bulk has the materials information on a label, the user scans the material number and adds quantity by </font></ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+
+<ul type="disc">
+<li><font face="Book Antiqua">Data to check and to notify</font></ul>
+<br>
+
+<table border="1">
+<tr valign="top"><td width="170"><div align="center"><b><font face="Book Antiqua">Storage categories</font></b></div></td><td width="378"><div align="center"><b><font face="Book Antiqua">Data to check and to notify</font></b></div></td></tr>
+
+<tr valign="top"><td width="170"><div align="center"><font face="Book Antiqua">Pallets in racks</font></div></td><td width="378"><font face="Book Antiqua">  - Pallet number</font><br>
+<font face="Book Antiqua">  - Quantity on pallet</font></td></tr>
+
+<tr valign="top"><td width="170"><div align="center"><font face="Book Antiqua">Bulk</font></div></td><td width="378"><font face="Book Antiqua">  - Material number</font><br>
+<font face="Book Antiqua">  - Quantity</font></td></tr>
+
+<tr valign="top"><td width="170"><div align="center"><font face="Book Antiqua">Picking zone per pallet</font></div></td><td width="378"><font face="Book Antiqua">  - Pallet number </font><br>
+<font face="Book Antiqua">  - Number of boxes</font></td></tr>
+
+<tr valign="top"><td width="170"><div align="center"><font face="Book Antiqua">Picking zone per carton per DLC or DLUO</font></div></td><td width="378"><font face="Book Antiqua">  - Number of boxes</font><br>
+<font face="Book Antiqua">  - DLC or DLUO</font></td></tr>
+
+<tr valign="top"><td width="170"><div align="center"><font face="Book Antiqua">Picking zone per unit</font></div></td><td width="378"><font face="Book Antiqua">  - Number of units</font><br>
+<font face="Book Antiqua">  - DLC or DLUO</font></td></tr>
+
+<tr valign="top"><td width="170"><div align="center"><font face="Book Antiqua">Milk inventory</font></div></td><td width="378"><font face="Book Antiqua">  - Quantity</font><br>
+<font face="Book Antiqua">  - Fat rate</font><br>
+<font face="Book Antiqua">  - Protein rate</font></td></tr>
+</table>
+<br>
+<font color="#FF0000" face="Book Antiqua">remark : in case of storage per block (example in water companies), the count may notify a global information = number of pallets per DLUO.</font><br>
+<font color="#FF0000" face="Book Antiqua">(because it may be impossible to notice every pallet number in detail). </font><br>
+<br>
+
+<ul>
+<ul>
+<ul>
+<ul><br>
+<b><font face="Book Antiqua">	2-5) </font></b><b><u><font face="Book Antiqua">Enter count results and Analyse results / differences</font></u></b></ul>
+</ul>
+</ul>
+</ul>
+<br>
+<br>
+<font face="Book Antiqua">Once inventory count has been realized :</font>
+<ul>
+<ul>
+<li type="disc"><font face="Book Antiqua">Enter the counted quantities into the system. </font><font color="#FF0000" face="Book Antiqua">It must be possible to enter the inventory with a G/L date of the previous month.</font>
+<li type="disc"><font face="Book Antiqua">Compare counted quantities with information system quantities</font>
+<li type="disc"><font face="Book Antiqua">Analyze reasons of mismatch in case of discrepancies</font></ul>
+<br>
+
+<ul>
+<ul>
+<ul><br>
+<br>
+<b><font face="Book Antiqua">	2-6) </font></b><b><u><font face="Book Antiqua">Post differences</font></u></b></ul>
+</ul>
+</ul>
+</ul>
+<br>
+<br>
+<font face="Book Antiqua">Once differences have been investigated and analyzed :</font><br>
+
+<ul>
+<ul>
+<li type="disc"><i><font face="Book Antiqua">Validate differences before posting : </font></i>
+<ul>
+<ul><font face="Book Antiqua">Depending on warehouses/countries, the valisation can be done by :</font>
+<ul>
+<ul>
+<ol type="1">
+<li><font face="Book Antiqua">either the warehouse staff</font>
+<li><font face="Book Antiqua">or by the Logistics manager</font>
+<li><font face="Book Antiqua">or Finance/Audit</font></ol>
+</ul>
+</ul>
+</ul>
+</ul>
+
+<li type="disc"><i><font face="Book Antiqua">Post inventory differences in Accounting</font></i>
+<ul><font face="Book Antiqua">Tolerances defined at the user level will be used for the posting of stock take differences.</font><br>
+<font face="Book Antiqua">A user will have a tolerance built in for posting of individual line items as well as the entire document.</font><br>
+<br>
+<font face="Book Antiqua">When the differences are posted, the stock quantity is automatically adjusted - reduced or increased- in the system.</font></ul>
+</ul>
+</ul>
+
+<ul>
+<ul>
+<ul><font face="Book Antiqua">The G/L acccount can be :</font>
+<ul>
+<ul>
+<ol type="1">
+<li><font face="Book Antiqua">either updated straight after the differences posting</font>
+<li><font face="Book Antiqua">or updated at the end of the, the differences being cumulated during the year each time there is an inventory counting.</font></ol>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+
+<ul>
+<ul type="disc">
+<li><font face="Book Antiqua">Go Live justification</font>
+<ul><font face="Book Antiqua">A statement must be done to explain how inventory is transfered from previous system to SAP</font><br>
+<br>
+<a style="display: inline-block; text-align: center" href="/IN-05/Inventory%20opening%20balance%20control.xls" title="Inventory opening balance control.xls"><img src="/IN-05/1.2870_OpenElement&amp;FieldElemFormat.gif" width="196" height="48" alt="Inventory opening balance control.xls" border="0"></a></ul>
+</ul>
+</ul>
+
+<ul type="disc">
+<li><b><font size="4" color="#FF0000" face="Arial">Inventory adjustement with WMS Interface</font></b></ul>
+
+<ul><font face="Arial">Inventory counting can be posted directly in SAP via WMS interfac</font><font size="4" face="Arial">e. </font><font face="Arial">This interface will be used to transmit the inventory results , of Raws &amp; Packs and Finished Products, from the Legacy System to SAP.  There are two different types of Interface. Please find below document is the Functional Design.</font>
+<ul type="disc">
+<li><font face="Arial">Fonctional design for specific stock adjustement </font><br>
+<b><font face="Arial">CORMM694</font></b><font face="Arial"> </font><b><font size="4" color="#0000FF" face="Arial">Physical inventory adjustments </font></b><a href="/redir.nsf?Redirect&amp;To=%2F368b2178ca01b46ec1256c830039b361%2F5465d5d760c58f31c1256cc9005fa3cf%3FOpen&amp;Id=C1256BF30043B294"><img src="./../Common/doclink.gif" border="0" alt="Base de documents 'Custom Development', Vue '2. Functional Design\11. Flat View', Document 'WMS - Stock counting Idoc ZCORIN029_STOCK'"></a><br>
+<br>
+<b><font size="4" face="Arial">For Italy </font></b><font size="4" face="Arial">before performing this stock adjustement they run another interface to check </font><font face="Arial">that all the movements (goods receipt, goods issue) received from the Legacy system  have been correctly processed into SAP before processing the stock counting.</font><font size="4" face="Arial">   </font>
+<li><b><font face="Arial">IT1MM011268</font></b><font face="Arial"> </font><b><font size="4" color="#0000FF" face="Arial">Stock counting Idoc management </font></b><a href="/redir.nsf?Redirect&amp;To=%2F368b2178ca01b46ec1256c830039b361%2F1b1043f987347e9cc1256dc6002da1c0%3FOpen&amp;Id=C1256BF30043B294"><img src="./../Common/doclink.gif" border="0" alt="Base de documents 'Custom Development', Vue '2. Functional Design\11. Flat View', Document 'Stock counting Idoc management'"></a><br>
+<b><font size="4" face="Arial">For Italy </font></b><font face="Arial">when the stock picture Idoc is processed in SAP</font><font size="4" face="Arial"> an idoc is sent </font><font face="Arial">automatically</font><font size="4" face="Arial"> to the Leagcy system as  a response.</font></ul>
+</ul>
+<font face="Arial">In order to manage the case that the Idoc is not processed in SAP, we need to define a time frame to send back also an Idoc in that case.</font><br>
+<font face="Arial">A third management case is the possibility to create a response Idoc manually using the stock picture Idoc number.</font>
+<ul>
+<ul type="disc">
+<li><b><font face="Arial">IT1MM01238</font></b><font face="Arial"> </font><b><font size="4" color="#0000FF" face="Arial">Stock Response Interface </font></b><a href="/redir.nsf?Redirect&amp;To=%2F368b2178ca01b46ec1256c830039b361%2F05319b8dc7f66ca0c1256dad003429d2%3FOpen&amp;Id=C1256BF30043B294"><img src="./../Common/doclink.gif" border="0" alt="Base de documents 'Custom Development', Vue '2. Functional Design\11. Flat View', Document 'Stock Response Interface'"></a></ul>
+</ul>
+
+<ul>
+<ul type="disc">
+<li><font size="4" face="Arial">Fonctional design for send stock level</font></ul>
+
+<ul><font face="Arial">  There is an interface which allows  to send stocks level for all special stock per material/Plant to legacy system from SAP.</font><br>
+<b><font face="Arial">  ES4MM713 </font></b><b><font color="#0000FF" face="Arial">Send stock level </font></b><a href="/redir.nsf?Redirect&amp;To=%2F368b2178ca01b46ec1256c830039b361%2F88eeb252c94858f0c1256cd200320fcb%3FOpen&amp;Id=C1256BF30043B294"><img src="./../Common/doclink.gif" border="0" alt="Base de documents 'Custom Development', Vue '2. Functional Design\11. Flat View', Document 'WMS - Send stock level Idoc LOISTD01'"></a></ul>
+</ul>
+
+<ul>
+<li type="disc"><b><font size="4" color="#0000FF" face="Arial">List of WMS Interface &amp; Configuration tables for WMS Interface</font></b>
+<ul>
+<li type="disc"><b><font face="Arial">List of WMS inteface, message types, output type</font></b><font face="Arial"> </font><a href="/Applications/Themis/Exchange/Ptcusto.nsf/d5b0b20082847b98c1256b36006a299d/73a3c3cd61d4b1bec1256ddc003468a0?OpenDocument"><img src="./../Common/doclink.gif" border="0" alt="Customizing"></a>
+<li type="disc"><b><font face="Arial">Configuration tables for WMS Interface</font></b><font face="Arial"> </font><a href="/Applications/Themis/Exchange/Ptcusto.nsf/d5b0b20082847b98c1256b36006a299d/955769fbb802b571c1256c6200345d52?OpenDocument"><img src="./../Common/doclink.gif" border="0" alt="Customizing"></a><BR><BR></TD>
+</TR>
+</TABLE></ul>
+</ul>
+<br>
+<a name="_Section2.4"></a><img height="16" width="16" src="./../Common/collapse.gif" border="0" alt="Hide details for Performance Indicators : "></a><b><font color="#00c1c2">Performance Indicators : </font></b><TABLE border="1" cellspacing="0" cellpadding="0" width="700px">
+<TR>
+	<TD width="350px"  CLASS="contenutitle">Indicators : </TD>
+	<TD width="350px"  CLASS="contenutitle">Comments : </TD>
+</TR>
+<TR>
+	<TD CLASS="contenunormal">IN - Inventory reliability</TD>
+	<TD CLASS="contenunormal">Track discreapancies between theorical stock balance and physical stock.</TD>
+</TR>
+<TR>
+	<TD CLASS="contenunormal"></TD>
+	<TD CLASS="contenunormal"></TD>
+</TR>
+<TR>
+	<TD CLASS="contenunormal"></TD>
+	<TD CLASS="contenunormal"></TD>
+</TR>
+<TR>
+	<TD CLASS="contenunormal"></TD>
+	<TD CLASS="contenunormal"></TD>
+</TR>
+<TR>
+	<TD CLASS="contenunormal"></TD>
+	<TD CLASS="contenunormal"></TD>
+</TR>
+<TR>
+	<TD CLASS="contenunormal"></TD>
+	<TD CLASS="contenunormal"></TD>
+</TR>
+<TR>
+	<TD CLASS="contenunormal"></TD>
+	<TD CLASS="contenunormal"></TD>
+</TR>
+<TR>
+	<TD CLASS="contenunormal"></TD>
+	<TD CLASS="contenunormal"></TD>
+</TR>
+</TABLE><br>
+<a name="_Section2.5"></a><img height="16" width="16" src="./../Common/collapse.gif" border="0" alt="Hide details for Supporting Systems, Applications &amp; Data Entities"></a><b><font color="#00c1c2">Supporting Systems, Applications &amp; Data Entities</font></b><TABLE border="0" cellspacing="0" cellpadding="0" width="700px">
+<TR>
+	<TD CLASS="contenutitle">Applications : </TD>	
+</TR>
+<TR>
+	<TD CLASS="contenunormal"></TD>
+</TR>
+<TR>
+	<TD CLASS="contenutitle">Applications and systems Schematic : </TD>	
+</TR>
+<TR>
+	<TD CLASS="contenunormal"></TD>
+</TR>
+</TABLE>
+<p><HR><br>
+<a name="_Section3"></a><img height="16" width="16" src="./../Common/collapse.gif" border="0" alt="Hide details for Revision Control"></a><b><font color="#ff8100">Revision Control</font></b><TABLE border="0" cellspacing="0" cellpadding="0" width="700px">
+<TR>
+	<TD CLASS="contenutitle">Revision Log Comments : </TD>
+</TR>
+</TABLE>
+<TABLE border="1" cellspacing="0" cellpadding="0">
+<TR>
+	<TD width="175px" CLASS="contenutitle">Action : </TD>
+	<TD width="175px" CLASS="contenutitle">Release / Version : </TD>
+<p><b><font size="2" face="Arial">	</font></b><TD width="175px" CLASS="contenutitle">Date / Time : </TD>
+	<TD width="175px" CLASS="contenutitle">Approved / Revised by : </TD>
+</TR>
+<TR>
+	<TD CLASS="contenunormal"></TD>
+	<TD CLASS="contenunormal"></TD><br>
+<b><font size="2" face="Arial">	</font></b><TD CLASS="contenunormal"></TD>
+	<TD CLASS="contenunormal"></TD>
+</TR>
+</TABLE><br>
+<HR>
+<TABLE border="0" cellspacing="0" cellpadding="0" width="700px">
+<TR>
+	<TD width="100px" CLASS="histtitle">Original Author : </TD>
+	<TD width="60%" CLASS="histnormal">Eric Brachet/Enet</TD>
+<p><b><font size="2" face="Arial">	</font></b><TD width="20%" CLASS="histnormal">03/22/2000 04:52 PM</TD>
+</TR>
+<TR><TD><BR></TD></TR>
+<TR>
+	<TD CLASS="histtitle">Edit History : </TD>
+	<TD CLASS="histnormal">Eliane KAKPO</TD>
+	<TD CLASS="histnormal">12/17/2003 07:11 PM</TD>
+</TR>
+<TR>
+	<TD CLASS="histtitle"></TD>
+	<TD CLASS="histnormal">Jean-Paul BARON</TD>
+	<TD CLASS="histnormal">12/16/2003 05:51 PM</TD>
+</TR>
+<TR>
+	<TD CLASS="histtitle"></TD>
+	<TD CLASS="histnormal">Eliane KAKPO</TD>
+	<TD CLASS="histnormal">12/11/2003 04:57 PM</TD>
+</TR>	<TR>
+	<TD CLASS="histtitle"></TD>
+	<TD CLASS="histnormal">Eliane KAKPO</TD>
+	<TD CLASS="histnormal">11/28/2003 11:57 AM</TD>
+</TR>
+<TR>
+	<TD CLASS="histtitle"></TD>
+	<TD CLASS="histnormal">Sylvie VILCOQ/THEMIS/FR/GD/DANONE</TD>
+	<TD CLASS="histnormal">06/11/2002 02:39 PM</TD>
+</TR>
+</TABLE>
+<BR>
+<TABLE border="0" cellspacing="0" cellpadding="0" width="700" >
+<TR>
+	<TD CLASS="histnormal">* Only past five edits are shown</TD>
+</TR>
+<TR>
+	<TD CLASS="histnormal">© Themis Delivery Manager tool provided by Accenture, Web version provided by Cohéris, (2019).</TD>
+</TR>				</TABLE>
+
+
+<p><br>
+<font size="2" color="#000080"><!-- </font>//--><br>
+</BODY></form>
+</body>
+</html>
+D>
+</TR>
+<TR>
+	<TD CLASS="histnormal">© Themis Delivery Manager tool provided by Accenture, Web version provided by Cohéris, (2019).</TD>
+</TR>				</TABLE>
+
+
+<p><br>
+<font size="2" color="#000080"><!-- </font>//--><br>
+</BODY></form>
+</body>
+</html>
