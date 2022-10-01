@@ -1,4 +1,5 @@
 
+modification projet C
 
 function Load_Sentences(ArrayObj) { 
 
